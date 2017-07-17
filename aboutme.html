@@ -2,26 +2,28 @@ hi
 <p>My name is Saba! Nice to meet you.I am 16 years old and I go to Lynbrook High School in San Jose, CA.</p>
 <p>I am currently in the Girls who Code SIP Program.</p>
  My hobbies include playing basketball (go warriors!), reading, coding, and spending time with my family and friends.
- <img src="https://sabasharf123.github.io/portfolio/Taylor-Swift.jpg" alt= "my favorite singer" style="width:250px;height:250px;">
- My favorite singer is Taylor Swift
+My favorite singer is Taylor Swift.
+<p>She's so talented and inspiring.</p>
 
 
- <!DOCTYPE html>
- <html>
- <head>
-   <script>
-   var TaylorSwift = function() {
-     document.getElementById('Taylor').width='450';
-     document.getElementById('Taylor').height='450';
-   }
-   </script>
- </head>
- <body>
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  var TayTay = function() {
+    document.getElementById('TS').width='400';
+    document.getElementById('TS').height='400';
+  }
+  </script>
+</head>
+<body>
 
- <h2>JavaScript Events and Functions: Resizing Taylor Swift</h2>
 
- <p>This example resizes my picture on mouseover:</p>
+<img id="TS" src="https://sabasharf123.github.io/portfolio/Taylor-Swift.jpg" width="250" height="250" name="TaylorSwift"
+onmouseover="TayTay()"
+onmouseout="TaylorSwift.width='250';TaylorSwift.height='250';" />
 
- <img id="taylor" src="https://sabasharf123.github.io/portfolio/Taylor-Swift.jpg" alt="Taylor Swift" width="250" height="250" name="Taytay"
- onmouseover="TaylorSwift()"
- onmouseout="Taylorswift.width='250';Taylorswift.height='250';" />
+
+
+</body>
+</html>
