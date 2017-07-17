@@ -4,7 +4,7 @@ hi
  My hobbies include playing basketball (go warriors!), reading, coding, and spending time with my family and friends.
 My favorite singer is Taylor Swift.
 <p>She's so talented and inspiring.</p>
-<p>I love spending time with my family!</p>
+<p>I also went to her concert on my birthday!</p>
 
 
 <!DOCTYPE html>
@@ -15,15 +15,23 @@ My favorite singer is Taylor Swift.
     document.getElementById('TS').width='400';
     document.getElementById('TS').height='400';
   }
+  var switchPicture = function () {
+      var currPic = document.getElementById('TS').src;
+      if (currPic == "https://sabasharf123.github.io/portfolio/Taylor-Swift.jpg") {
+        document.getElementById('TS').src = "https://sabasharf123.github.io/portfolio/concert.jpg";
+      }
+      else {
+        document.getElementById('TS').src = "https://sabasharf123.github.io/portfolio/Taylor-Swift.jpg";
+      }
+    }
   </script>
 </head>
 <body>
 
-
-<img id="TS" src="https://sabasharf123.github.io/portfolio/Taylor-Swift.jpg" width="250" height="250" name="TaylorSwift"
+<img id='TS' src="https://sabasharf123.github.io/portfolio/Taylor-Swift.jpg" width="250" height="250" name="TaylorSwift"
 onmouseover="TayTay()"
-onmouseout="TaylorSwift.width='250';TaylorSwift.height='250';" />
-
+onmouseout="TaylorSwift.width='250';TaylorSwift.height='250';"
+onclick="switchPicture()" />
 
 
 </body>
