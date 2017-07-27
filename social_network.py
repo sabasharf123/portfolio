@@ -1,4 +1,6 @@
 #blueprint for what a vehicle is
+
+
 class Vehicle:
 
     #Defines the fields of an object of this class
@@ -27,6 +29,7 @@ def main():
 
         SpaceCraft = Vehicle("Apollo 13")
         SpaceCraft.add_passengers("Tom Hanks")
+        SpaceCraft.add_passengers("Vicky")
 
         print("Passengers in super car: " + str(SuperCar.passengers))
         print("Passengers in super craft: " + str(SpaceCraft.passengers))
