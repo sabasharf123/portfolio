@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="Scenicpics" src="http://68.media.tumblr.com/f401441830ba33a8cba1fdca68cadd1a/tumblr_inline_molvr2m9fv1qz4rgp.jpg" style="width:75%">
+  <img class="Scenicpics" src="http://data.whicdn.com/images/58361307/large.jpg" style="width:75%">
+  <img class="Scenicpics" src="http://images.kuoni.co.uk/73/solana-beach-34389580-1494493023-ImageGalleryLightboxLarge.jpg" style="width:75%">
+  <img class="Scenicpics" src="http://www.hdwallpaper.nu/wp-content/uploads/2015/07/1ca54e3d938b6194ce571edecad997da.jpg" style="width:75%">
+  <img class="Scenicpics" src="http://images.all-free-download.com/images/graphiclarge/beautiful_nature_landscape_05_hd_picture_166223.jpg" style="width:75%">
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("Scenicpics");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+<script>
+//Array of images which you want to show: Use path you want.
+var images=new Array('Assets/BGImages/head_sandwichman1.jpg','Assets/BGImages/head_sandwichman2.jpg','Assets/BGImages/head_sandwichman3.jpg');
+var nextimage=0;
+doSlideshow();
+
+function doSlideshow(){
+    if(nextimage>=images.length){nextimage=0;}
+    $('.global-header')
+    .css('background-image','url("'+images[nextimage++]+'")')
+    .fadeIn(500,function(){
+        setTimeout(doSlideshow,1000);
+    });
+}
+</script>
